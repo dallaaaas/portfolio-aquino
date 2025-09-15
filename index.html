@@ -10,364 +10,216 @@
   <link href="./dist/output.css" rel="stylesheet">
 
 </head>
-<body class="w-full h-full bg-gray-100 text-gray-800 font-sans flex flex-col gap-y-4 ">
+<body class="w-full h-full bg-gray-100 text-gray-800 font-sans flex flex-col gap-y-2 ">
 
-    <nav class="w-full h-32 flex items-center justify-between">
-        <div class=" bg-green-700 w-full mx-36 py-4 px-16 flex items-center justify-between rounded-full">
+    <nav class="w-full h-32 flex items-center justify-between sticky top-0 z-50">
+        <div class="bg-green-700 w-full mx-36 py-4 px-16 flex items-center justify-between rounded-full">
             <div class="flex items-center space-x-4">
-                <div class="text-white text-2xl font-semibold">Dallas</div>
+                <div class="text-white text-2xl font-semibold transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer">Dallas</div>
             </div>
             <div class="flex flex-row items-center justify-center gap-x-16">
                 <div class="flex gap-x-6">
-                    <a href="#" class="text-white hover:text-yellow-400">Home</a>
-                    <a href="#" class="text-white hover:text-yellow-400 mx-4">Skills</a>
-                    <a href="#" class="text-white hover:text-yellow-400">Experience</a>
-                    <a href="#" class="text-white hover:text-yellow-400 mx-4">Projects</a>
+                    <a id="home-link" href="#" class="text-white font-semibold transition-transform duration-300 ease-in-out hover:scale-110 hover:text-yellow-400">Home</a>
+                    <a id="skills-link" href="#" class="text-white font-semibold transition-transform duration-300 ease-in-out hover:scale-110 mx-4 hover:text-yellow-400">Skills</a>
+                    <a id="experience-link" href="#" class="text-white font-semibold transition-transform duration-300 ease-in-out hover:scale-110 hover:text-yellow-400">Projects</a>
+                    <a id="projects-link" href="#" class="text-white font-semibold transition-transform duration-300 ease-in-out hover:scale-110 mx-4 hover:text-yellow-400">Experience</a>
                 </div>
-                <a href="#" class="bg-white text-green-900 px-4 py-2 rounded-full hover:bg-yellow-400 hover:text-white transition duration-300">Contact Me</a>
+                <a href="#" class="bg-white text-green-900 px-4 py-2 rounded-full font-semibold transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-yellow-400 hover:text-white">Contact Me</a>
             </div>
         </div>
     </nav>
 
     <!-- Introduction -->
-    <section class="h-64 my-32 flex flex-row items-center justify-center">
-        <div class="mx-36 flex-1 flex-col space-y-2">
-            <div class="text-4xl">Hello</div>
-            <div class="text-6xl">I'm Dallas Aquino</div>
-            <div>An aspiring UI/UX Designer 3rd-year Computer Science Student currently studying at West Visayas State University </div>
-            <div class="flex flex-row">  <div>Get in Touch</div> CV </div>
-         
-    
+    <section id = "introduction" class="my-4 flex flex-row items-center justify-center">
+        <div class="mx-64 flex-1 flex-col space-y-6">
+            <div class="text-4xl fade-in fade-in-delay-1">Hello, I am</div>
+            <div class="text-6xl fade-in fade-in-delay-2">
+            <span class="typing-animation" id="typing-text"></span>
+            </div>
+            <div class="fade-in fade-in-delay-3">An aspiring Graphic Designer and 3rd-year Computer Science Student currently studying at West Visayas State University</div>
+            <div class="flex flex-row items-center space-x-6">
+                <div class="bg-green-700 text-white text-2xl px-14 py-3 rounded-full transition-transform duration-500 ease-in-out hover:scale-105 hover:text-yellow-400 hover:font-regular cursor-pointer fade-in fade-in-delay-4">
+                    Get in Touch
+                </div>
+                <div class="border-2 border-green-700 text-green-700 text-2xl px-14 py-3 rounded-full font-medium transition-transform duration-500 ease-in-out hover:scale-105 cursor-pointer fade-in fade-in-delay-4">
+                    CV
+                </div>
+            </div>
         </div>
-        <div class="mx-36 flex-1 flex-col">
-            <div class="w-128 h-128 bg-blue-500 flex items-center justify-center">insert picture</div>
-
+        <div class="flex-1 flex-col mr-56">
+            <div class="flex items-start justify-start overflow-hidden">
+                <img src="img/pfp.png" alt="Profile" class="w-[200%] h-auto object-cover rounded transition-transform duration-500 ease-in-out hover:scale-105 fade-in fade-in-delay-5" />
+            </div>
         </div>
     </section>
 
     <!-- Skills -->
-       <section class="my-32 mx-36 p-8">
-        <h2 class="text-2xl font-bold text-gray-800">- Services</h2>
-        <h3 class="text-4xl font-bold text-gray-900">Services I Provide</h3>
-        
-        <div class="flex space-x-6 mt-8">
-            <div class="flex flex-col items-start p-6 bg-white rounded-lg shadow-md">
-                <div class="bg-blue-500 text-white p-2 rounded-full">
-                    <span class="text-2xl">📱</span> <!-- Replace with an icon or image -->
+
+        <section id="skills" class="my-32 mx-64">
+            <h2 class="text-7xl mb-16">Skills</h2>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="flex flex-col items-start p-12 bg-white rounded-xl shadow-md hover:shadow transition-all duration-300">
+                    <h4 class="text-5xl mt-4 mb-4">Graphic Design</h4>
+                    <p class="mt-4 text-xl text-gray-600">I specialize in graphic design, with a strong focus on layout, photo manipulation, photo enhancement, and advertisement. My passion lies in creating visually impactful designs that effectively communicate ideas and engage audiences.</p>
                 </div>
-                <h4 class="text-xl font-semibold mt-4">UI/UX Design</h4>
-                <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ...</p>
-                <a href="#" class="mt-4 text-blue-500 hover:underline">Learn more &rarr;</a>
-            </div>
-
-            <div class="flex flex-col items-start p-6 bg-white rounded-lg shadow-md">
-                <div class="bg-green-500 text-white p-2 rounded-full">
-                    <span class="text-2xl">🛠️</span> <!-- Replace with an icon or image -->
+                <div class="flex flex-col items-start p-12 bg-white rounded-xl shadow-md hover:shadow transition-all duration-300">
+                    <h4 class="text-5xl mt-4 mb-4">Image Manipulation</h4>
+                    <p class="mt-4 text-xl text-gray-600">I have strong skills in photo manipulation, enhancing images to create visually compelling visuals. My work combines creativity and technical expertise to retouch photos, create composites, and apply artistic effects.</p>
                 </div>
-                <h4 class="text-xl font-semibold mt-4">Application Design</h4>
-                <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ...</p>
-                <a href="#" class="mt-4 text-green-500 hover:underline">Learn more &rarr;</a>
             </div>
-
-            <div class="flex flex-col items-start p-6 bg-white rounded-lg shadow-md">
-                <div class="bg-yellow-500 text-white p-2 rounded-full">
-                    <span class="text-2xl">🌐</span> <!-- Replace with an icon or image -->
+            <div class="mt-24">
+                <!-- Tools -->
+                <div class="grid grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-sm p-8 h-64 transition-all duration-300 hover:shadow group">
+                        <div class="flex items-center justify-center w-36 h-36 mb-6">
+                            <img src="img/img1.png" alt="Photoshop" class="w-28 h-28 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <span class="text-2xl font-bold text-gray-800">Photoshop</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-sm p-8 h-64 transition-all duration-300 hover:shadow group">
+                        <div class="flex items-center justify-center w-36 h-36 mb-6">
+                            <img src="img/img2.png" alt="Figma" class="w-28 h-28 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <span class="text-2xl font-bold text-gray-800">Figma</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-sm p-8 h-64 transition-all duration-300 hover:shadow group">
+                        <div class="flex items-center justify-center w-36 h-36 mb-6">
+                            <img src="img/img3.png" alt="Canva" class="w-28 h-28 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <span class="text-2xl font-bold text-gray-800">Canva</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-sm p-8 h-64 transition-all duration-300 hover:shadow group">
+                        <div class="flex items-center justify-center w-36 h-36 mb-6">
+                            <img src="img/img4.png" alt="Illustrator" class="w-28 h-28 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <span class="text-2xl font-bold text-gray-800">Illustrator</span>
+                    </div>
                 </div>
-                <h4 class="text-xl font-semibold mt-4">Website Design</h4>
-                <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ...</p>
-                <a href="#" class="mt-4 text-yellow-500 hover:underline">Learn more &rarr;</a>
             </div>
-        </div>
-
-        <!-- Button for viewing all services -->
-        <div class="mt-8">
-            <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition duration-300">
-                View All Services
-            </a>
-        </div>
-    </section>
-
-    
-
-         <!-- Tools -->
-        <section class="my-32 text-center">
-        <h2 class="text-lg text-gray-500">- My Favorite Tools</h2>
-        <h3 class="text-3xl font-bold mt-2">Exploring the Tools Behind My Designs</h3>
-        
-        <div class="flex justify-center space-x-8 mt-8">
-            <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
-                <img src="path/to/figma-icon.png" alt="Figma" class="w-12 h-12 mb-2"> <!-- Replace with the actual path -->
-                <span class="text-2xl font-semibold">98%</span>
-                <span>Figma</span>
-            </div>
-            <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
-                <img src="path/to/sketch-icon.png" alt="Sketch" class="w-12 h-12 mb-2"> <!-- Replace with the actual path -->
-                <span class="text-2xl font-semibold">92%</span>
-                <span>Sketch</span>
-            </div>
-            <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
-                <img src="path/to/photoshop-icon.png" alt="Photoshop" class="w-12 h-12 mb-2"> <!-- Replace with the actual path -->
-                <span class="text-2xl font-semibold">90%</span>
-                <span>Photoshop</span>
-            </div>
-            <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
-                <img src="path/to/after-effects-icon.png" alt="After Effects" class="w-12 h-12 mb-2"> <!-- Replace with the actual path -->
-                <span class="text-2xl font-semibold">85%</span>
-                <span>After Effects</span>
-            </div>
-            <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
-                <img src="path/to/storybook-icon.png" alt="Storybook" class="w-12 h-12 mb-2"> <!-- Replace with the actual path -->
-                <span class="text-2xl font-semibold">90%</span>
-                <span>Storybook</span>
-            </div>
-            <div class="flex flex-col items-center bg-white rounded-lg shadow-md p-4">
-                <img src="path/to/invision-icon.png" alt="InVision" class="w-12 h-12 mb-2"> <!-- Replace with the actual path -->
-                <span class="text-2xl font-semibold">95%</span>
-                <span>InVision</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
 
-     <!-- Portfolio -->
-    <section class="my-32 text-center">
-        <h2 class="text-lg text-gray-500">- My Portfolio</h2>
-        <h3 class="text-3xl font-bold mt-2">My Latest Projects</h3>
-        
-        <div class="flex justify-center space-x-8 mt-8">
-            <div class="flex flex-col items-start bg-white rounded-lg shadow-md overflow-hidden w-80">
-                <div class="bg-gray-300 h-48 w-full"> <!-- Placeholder for image -->
-                    <!-- Replace with an actual image element -->
+     <!-- Projects -->
+<section class="mx-64 mt-16 flex flex-col">
+    <h2 class="text-6xl">Projects</h2>
+    <div class="flex flex-col justify-center space-x-8 mt-8 flex-grow">
+
+        <div class="flex flex-row flex-grow gap-x-4"> <!-- Make parent div for items fill available space -->
+            <div class="flex flex-col items-start bg-white rounded-lg shadow-md overflow-hidden w-80 flex-grow">
+                <div class="relative h-128 w-full overflow-hidden"> <!-- Container with relative positioning -->
+                    <img src="img/wevo.png" alt="WEVO Project" class="absolute w-full h-full object-cover"> <!-- Image that fills container -->
                 </div>
-                <div class="p-4">
+                <div class="p-4 flex-grow flex flex-col justify-between">
                     <div class="flex space-x-2">
                         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">UI/UX Design</span>
                         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">App Design</span>
                         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">Wireframe</span>
                     </div>
-                    <h4 class="text-lg font-semibold mt-2">Beauty Product - Ecommerce Mobile App Solution</h4>
+                    <h4 class="text-lg font-semibold mt-2">WEVO - WVSU Event Venue Outlet</h4>
                 </div>
             </div>
 
-            <div class="flex flex-col items-start bg-white rounded-lg shadow-md overflow-hidden w-80">
-                <div class="bg-gray-300 h-48 w-full"> <!-- Placeholder for image -->
-                    <!-- Replace with an actual image element -->
+            <div class="flex flex-col items-start bg-white rounded-lg shadow-md overflow-hidden w-80 flex-grow">
+                <div class="relative h-128 w-full overflow-hidden"> <!-- Container with relative positioning -->
+                    <img src="img/nsci.png" alt="WEVO Project" class="absolute w-full h-full object-cover">
                 </div>
-                <div class="p-4">
+                <div class="p-4 flex-grow flex flex-col justify-between">
                     <div class="flex space-x-2">
-                        <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">UI/UX Design</span>
-                        <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">Web Design</span>
-                        <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">Wireframe</span>
+                        <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">Developer</span>
+                        <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-1 rounded">Designer</span>
                     </div>
-                    <h4 class="text-lg font-semibold mt-2">Beauty Product Mobile App Landing Page Design</h4>
+                    <h4 class="text-lg font-semibold mt-2">NSCI Final Project - Interactive Game</h4>
                 </div>
             </div>
         </div>
 
-        <div class="mt-8">
-            <a href="#" class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300">
-                View All Projects &rarr;
-            </a>
-        </div>
-    </section>
+
+
+        
+
+    </div>
+
+    <div class="mt-8 flex justify-end">
+        <a href="#" class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300">
+            View All Projects &rarr;
+        </a>
+    </div>
+</section>
 
     <!-- Experience-->
-     <section class="my-32 text-center">
-        <h2 class="text-lg text-gray-500">- Education & Work</h2>
-        <h3 class="text-3xl font-bold mt-2">My Academic and Professional Journey</h3>
-        
+    <section id="experience" class="my-32 mx-64">
+        <h2 class="text-6xl">Education and Experience</h2>
+            
         <div class="flex justify-center space-x-8 mt-8">
             <!-- Education Column -->
-            <div class="bg-white rounded-lg shadow-md p-6 w-80">
-                <h4 class="text-xl font-semibold mb-4">
-                    <span class="inline-block bg-yellow-200 text-yellow-800 rounded-full p-2">
-                        🎓
-                    </span>
+            <div class="bg-white rounded-lg shadow-md p-6 flex-1"> <!-- Added flex-1 -->
+                <h4 class="text-4xl mb-4">
                     Education
                 </h4>
                 <div class="mb-4">
-                    <span class="font-bold">2012 - 2014</span>
-                    <div class="text-gray-700">Harmony Institute</div>
-                    <p class="text-gray-500">Master in Visual Arts</p>
+                    <span class="font-bold text-green-700 text-xl">2010 - 2016</span>
+                    <div class="text-gray-700 text-xl">Pavia Pilot Elementary School</div>
+                    <p class="text-gray-500">Special Science Class</p>
                 </div>
                 <div class="mb-4">
-                    <span class="font-bold">2008 - 2012</span>
-                    <div class="text-gray-700">Aurora Academy</div>
-                    <p class="text-gray-500">Master in Visual Arts</p>
+                    <span class="font-bold text-green-700 text-xl">2016 - 2022</span>
+                    <div class="text-gray-700 text-xl">Pavia National High School</div>
+                    <p class="text-gray-500">Science Technology and Engineering; ICT - TVL Track</p>
                 </div>
                 <div>
-                    <span class="font-bold">1996 - 2008</span>
-                    <div class="text-gray-700">Crystalbrook</div>
-                    <p class="text-gray-500">Master in Visual Arts</p>
+                    <span class="font-bold text-green-700 text-xl">2022 - Now</span>
+                    <div class="text-gray-700 text-xl">West Visayas State University</div>
+                    <p class="text-gray-500">Bachelor of Science in Computer Science</p>
                 </div>
             </div>
 
             <!-- Work Experience Column -->
-            <div class="bg-white rounded-lg shadow-md p-6 w-80">
-                <h4 class="text-xl font-semibold mb-4">
-                    <span class="inline-block bg-yellow-200 text-yellow-800 rounded-full p-2">
-                        💼
-                    </span>
+            <div id="projects" class="bg-white rounded-lg shadow-md p-6 flex-1"> <!-- Added flex-1 -->
+                <h4 class="text-4xl - mb-4">
                     Work Experience
                 </h4>
                 <div class="mb-4">
-                    <span class="font-bold">2018 - 2024</span>
-                    <div class="text-gray-700">Insightlancer</div>
-                    <p class="text-gray-500">Master in Visual Arts</p>
+                    <span class="font-bold text-green-700 text-xl">2023 - 2025</span>
+                    <div class="text-gray-700 text-xl">LINK.exe</div>
+                    <p class="text-gray-500">Layout Artist and Illustrator</p>
                 </div>
                 <div class="mb-4">
-                    <span class="font-bold">2016 - 2018</span>
-                    <div class="text-gray-700">Self-Employed</div>
-                    <p class="text-gray-500">Master in Visual Arts</p>
+                    <span class="font-bold text-green-700 text-xl">2024 - 2025</span>
+                    <div class="text-gray-700 text-xl">ICON Publication</div>
+                    <p class="text-gray-500">Junior Layout Artist</p>
                 </div>
                 <div>
-                    <span class="font-bold">2014 - 2016</span>
-                    <div class="text-gray-700">KG Graphics Studio</div>
-                    <p class="text-gray-500">Master in Visual Arts</p>
+                    <span class="font-bold text-green-700 text-xl">2025 - Now</span>
+                    <div class="text-gray-700 text-xl">COTEX</div>
+                    <p class="text-gray-500">Photo Editor/Manipulator and Layout Artist </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--Contact Now-->
-   <section class="my-32 px-8">
-        <h2 class="text-lg text-gray-500">- Contact Us</h2>
-        <h3 class="text-3xl font-bold mt-2">Let’s Talk for <span class="text-yellow-500">Your Next Projects</span></h3>
-        <p class="mt-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <div class="mt-8 flex">
-            <div class="flex flex-col space-y-6 w-1/3">
-                <div class="flex items-center">
-                    <span class="mr-2 text-gray-600"><i class="fas fa-phone-alt"></i></span>
-                    <span class="text-gray-700">+1 (406) 555–0120</span>
-                </div>
-                <div class="flex items-center">
-                    <span class="mr-2 text-gray-600"><i class="fas fa-envelope"></i></span>
-                    <span class="text-gray-700">example@gmail.com</span>
-                </div>
-                <div class="flex items-center">
-                    <span class="mr-2 text-gray-600"><i class="fab fa-skype"></i></span>
-                    <span class="text-gray-700">example</span>
-                </div>
-                <div class="flex items-center">
-                    <span class="mr-2 text-gray-600"><i class="fas fa-map-marker-alt"></i></span>
-                    <span class="text-gray-700">2464 Royal Ln. Mesa, New Jersey 45463</span>
-                </div>
+
+    <!--Footer
+    <footer class="bg-green-700 text-white py-6 mt-8">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center px-4">
+            <div class="mb-4 sm:mb-0">
+                <p class="text-sm">&copy; 2023 Dallas Aquino. All Rights Reserved.</p>
             </div>
-
-            <form class="bg-white p-6 rounded-lg shadow-md ml-8 w-2/3">
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700">Your Name *</label>
-                        <input type="text" placeholder="Ex. John Doe" class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700">Email *</label>
-                        <input type="email" placeholder="example@gmail.com" class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700">Phone *</label>
-                        <input type="tel" placeholder="Enter Phone Number" class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700">I’m Interested in *</label>
-                        <select class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
-                            <option>Select</option>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700">Budget Range (USD) *</label>
-                        <select class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
-                            <option>Select Range</option>
-                            <option>Range 1</option>
-                            <option>Range 2</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700">Country *</label>
-                        <select class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
-                            <option>Select Country</option>
-                            <option>Country 1</option>
-                            <option>Country 2</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <label class="block text-sm font-semibold text-gray-700">Your Message *</label>
-                    <textarea placeholder="Enter here.." class="mt-1 block w-full border border-gray-300 rounded-md p-2" rows="4" required></textarea>
-                </div>
-                <div class="mt-6">
-                    <button type="submit" class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300 flex items-center">
-                        Submit <span class="ml-2">→</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!--Footer-->
-     <footer class="my-32 px-8">
-        <h2 class="text-3xl font-bold mb-4">Let’s <span class="text-yellow-500">Connect</span> there</h2>
-        <div class="flex justify-between items-start bg-white rounded-lg shadow-md p-8">
-            <!-- Left Column -->
-            <div class="flex flex-col">
-                <div class="flex items-center mb-4">
-                    <span class="bg-yellow-200 rounded-full p-2 mr-2">
-                        <span role="img" aria-label="user">👤</span>
-                    </span>
-                    <span class="text-xl font-semibold">Olivia.</span>
-                </div>
-                <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <!-- Social Media Links -->
-                <div class="flex space-x-4">
-                    <a href="#" class="text-yellow-500"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-yellow-500"><i class="fab fa-behance"></i></a>
-                    <a href="#" class="text-yellow-500"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-yellow-500"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="text-yellow-500"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <!-- Right Column -->
-            <div class="flex flex-col ml-8">
-                <h4 class="text-lg font-semibold mb-2">Navigation</h4>
-                <ul class="text-gray-700 mb-4">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Blogs</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-
-                <h4 class="text-lg font-semibold mb-2">Contact</h4>
-                <ul class="text-gray-700 mb-4">
-                    <li>+0123–456–789</li>
-                    <li><a href="#">www.example.com</a></li>
-                    <li><a href="mailto:example@gmail.com">example@gmail.com</a></li>
-                    <li>2464 Royal Ln. Mesa, New Jersey 45463</li>
-                </ul>
-
-                <!-- Subscription Form -->
-                <div class="mt-4">
-                    <h4 class="text-lg font-semibold mb-2">Get the latest information</h4>
-                    <div class="flex">
-                        <input type="email" placeholder="Email address" class="border rounded-l-lg p-2 w-60" />
-                        <button class="bg-yellow-500 text-white px-4 rounded-r-lg">Subscribe</button>
-                    </div>
-                </div>
+ 
+            <div class="flex space-x-4">
+                <a href="#" aria-label="Facebook" target="_blank">
+                    <img src="path/to/facebook-icon.png" alt="Facebook" class="w-6 h-6">
+                </a>
+                <a href="#" aria-label="Instagram" target="_blank">
+                    <img src="path/to/instagram-icon.png" alt="Instagram" class="w-6 h-6">
+                </a>
+                <a href="#" aria-label="LinkedIn" target="_blank">
+                    <img src="path/to/linkedin-icon.png" alt="LinkedIn" class="w-6 h-6">
+                </a>
             </div>
         </div>
+    </footer> -->
 
-        <div class="mt-4">
-            <a href="#" class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300">
-                View All Blogs &rarr;
-            </a>
-        </div>
-    </footer>
  
     <script src="script.js"></script>
 </body>
