@@ -1,3 +1,89 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Adjust this value for initial offset */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Fully transparent */
+    }
+    to {
+        opacity: 1; /* Fully opaque */
+    }
+}
+
+.fade-in {
+    opacity: 0; /* Initial state: hidden */
+    animation: fadeIn 0.5s ease-in forwards; /* Duration and easing */
+}
+
+.fade-in-delay-1 {
+    animation-delay: 0.2s; /* Delay for the first element */
+}
+
+.fade-in-delay-2 {
+    animation-delay: 0.4s; /* Delay for the second element */
+}
+
+.fade-in-delay-3 {
+    animation-delay: 0.6s; /* Delay for the third element */
+}
+
+.fade-in-delay-4 {
+    animation-delay: 0.8s; /* Delay for the fourth element */
+}
+
+.fade-in-delay-5 {
+    animation-delay: 1s; /* Delay for the image */
+}
+
+  .section-container {
+    @apply w-full max-w-6xl mx-auto px-16;
+  }
+
+  .text-6xl {
+  font-size: 4rem; /* Adjust size as needed */
+}
+
+.typing-animation {
+  border-right: 2px solid black; /* Cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(12) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12ch; } /* Adjust to the length of "Dallas Aquino" */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.tool-container {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.flashing {
+    opacity: 1; /* Make it visible */
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
